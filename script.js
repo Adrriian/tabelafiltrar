@@ -162,3 +162,60 @@ function adicionarContatos() {
     document.getElementById('nomeInput').value = "";
     document.getElementById('telefoneInput').value = "";
 }
+// Função para copiar todos os nomes da coluna
+function copiarNomes() {
+    const table = document.getElementById('contactsTable');
+    const rows = table.getElementsByTagName('tr');
+    let nomes = [];
+
+    // Ignora a primeira linha (cabeçalho)
+    for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName('td');
+        const nome = cells[0].innerText.trim();
+        
+        // Adiciona apenas nomes não vazios
+        if (nome) {
+            nomes.push(nome);
+        }
+    }
+
+    // Copia os nomes para a área de transferência
+    if (nomes.length > 0) {
+        navigator.clipboard.writeText(nomes.join('\n')).then(() => {
+            alert('Nomes copiados para a área de transferência!');
+        }).catch(err => {
+            console.error('Erro ao copiar nomes: ', err);
+        });
+    } else {
+        alert('Não há nomes para copiar!');
+    }
+}
+
+// Função para copiar todos os telefones da coluna
+function copiarTelefones() {
+    const table = document.getElementById('contactsTable');
+    const rows = table.getElementsByTagName('tr');
+    let telefones = [];
+
+    // Ignora a primeira linha (cabeçalho)
+    for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName('td');
+        const telefone = cells[1].innerText.trim();
+        
+        // Adiciona apenas telefones não vazios
+        if (telefone) {
+            telefones.push(telefone);
+        }
+    }
+
+    // Copia os telefones para a área de transferência
+    if (telefones.length > 0) {
+        navigator.clipboard.writeText(telefones.join('\n')).then(() => {
+            alert('Telefones copiados para a área de transferência!');
+        }).catch(err => {
+            console.error('Erro ao copiar telefones: ', err);
+        });
+    } else {
+        alert('Não há telefones para copiar!');
+    }
+}
