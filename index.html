@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Contatos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Div para as caixas de texto à esquerda -->
+        <div class="inputs-container">
+            <div class="input-group">
+                <label for="nomeInput">Nome</label>
+                <textarea id="nomeInput" rows="5" cols="20" placeholder="Digite nomes separados por nova linha..."></textarea>
+                <button onclick="adicionarContatos()">Adicionar</button> <!-- Botão para adicionar contato -->
+            </div>
+            <div class="input-group">
+                <label for="telefoneInput">Telefone</label>
+                <textarea id="telefoneInput" rows="5" cols="20" placeholder="Digite telefones separados por nova linha..."></textarea>
+            </div>
+        </div>
+
+        <!-- Tabela e botões acima dela -->
+        <div class="table-container">
+            <!-- Botões acima da tabela -->
+            <div class="buttons-container">
+                <button onclick="filtrar()">Filtrar</button>
+                <button onclick="adicionarLinhas()">Adicionar Linhas</button>
+                <button onclick="removerDuplicatas()">Remover Linhas Duplicadas</button>
+                <button onclick="limparDados()">Limpar Dados</button> <!-- Botão alterado para "Limpar Dados" -->
+            </div>
+            <!-- Tabela de contatos -->
+            <table id="contactsTable">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

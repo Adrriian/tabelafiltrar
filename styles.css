@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    display: flex; /* Organiza os elementos horizontalmente */
+}
+
+.inputs-container {
+    margin-right: 20px; /* Espaço entre textareas e tabela */
+}
+
+.input-group {
+    margin-bottom: 20px; /* Espaço entre os grupos de inputs */
+}
+
+textarea {
+    width: 100%; /* Faz o textarea preencher toda a largura disponível */
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo para os botões acima da tabela */
+.buttons-container {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.table-container {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 150px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td {
+    text-align: left;
+}
