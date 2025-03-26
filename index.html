@@ -3,58 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela de Contatos</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Filtro de Listas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Div para as caixas de texto à esquerda -->
-        <div class="inputs-container">
-            <div class="input-group">
-                <label for="nomeInput">Nome</label>
-                <textarea id="nomeInput" rows="5" cols="20" placeholder="Digite nomes separados por nova linha..."></textarea>
-                <button onclick="adicionarContatos()">Adicionar</button> <!-- Botão para adicionar contato -->
-            </div>
-            <div class="input-group">
-                <label for="telefoneInput">Telefone</label>
-                <textarea id="telefoneInput" rows="5" cols="20" placeholder="Digite telefones separados por nova linha..."></textarea>
+    <div class="area">
+        <div class="area_textarea">
+            <textarea id="inputValores" placeholder="Digite os números separados por vírgula"></textarea>
+            <div class="area_button">
+                <button onclick="adicionarLista(1)">Lista 1</button>
+                <button onclick="adicionarLista(2)">Lista 2</button>
+                <button onclick="filtrar()">Filtrar</button>
             </div>
         </div>
-
-        <!-- Tabela e botões acima dela -->
-        <div class="table-container">
-            <!-- Botões acima da tabela -->
-            <div class="buttons-container">
-                <button onclick="filtrar()">Filtrar</button>
-                <button onclick="adicionarLinhas()">Adicionar Linhas</button>
-                <button onclick="removerDuplicatas()">Remover Linhas Duplicadas</button>
-                <button onclick="limparDados()">Limpar Dados</button> <!-- Botão alterado para "Limpar Dados" -->
-                <button onclick="copiarNomes()">Copiar Nomes</button> <!-- Botão para copiar nomes -->
-                <button onclick="copiarTelefones()">Copiar Telefones</button> <!-- Botão para copiar telefones -->
+        <div class="area_tabela">
+            <div class="table">
+                <h3>Tabela 1</h3>
+                <table id="tabela1"></table>
             </div>
-            <!-- Tabela de contatos -->
-            <table id="contactsTable">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                    </tr>
-                    <tr>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                    </tr>
-                    <tr>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table">
+                <h3>Tabela 2</h3>
+                <table id="tabela2"></table>
+            </div>
+            <div class="table">
+                <h3>Tabela Filtrada</h3>
+                <table id="tabelaFiltrada"></table>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
