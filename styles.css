@@ -1,63 +1,63 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: flex-start;
+  margin: 0;
 }
 
-.container {
-    display: flex; /* Organiza os elementos horizontalmente */
+.area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
 }
 
-.inputs-container {
-    margin-right: 20px; /* Espaço entre textareas e tabela */
+.area_textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-top: 100px;
 }
 
-.input-group {
-    margin-bottom: 20px; /* Espaço entre os grupos de inputs */
+.area_button {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.area_tabela {
+  display: flex;
+  gap: 20px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 textarea {
-    width: 100%; /* Faz o textarea preencher toda a largura disponível */
-}
-
-button {
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* Estilo para os botões acima da tabela */
-.buttons-container {
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.table-container {
-    text-align: center;
+  width: 200px;
+  height: 100px;
 }
 
 table {
-    border-collapse: collapse;
-    margin: 20px auto;
+  width: 200px;
+  border-collapse: collapse;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    width: 150px;
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
 }
 
-th {
-    background-color: #f2f2f2;
-}
-
-td {
-    text-align: left;
+.repetido {
+  background-color: blue;
+  color: white;
 }
